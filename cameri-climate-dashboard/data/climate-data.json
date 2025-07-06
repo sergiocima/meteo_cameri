@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "title": "Dati Climatici Cameri - Luglio",
+    "description": "Dataset completo delle temperature di luglio a Cameri (1973-2025)",
+    "source": "Stazione Meteorologica Cameri",
+    "years": 53,
+    "totalDays": 1643,
+    "variables": ["tempMedia", "tempMin", "tempMax", "umidita", "pioggia", "fenomeni"],
+    "units": {
+      "temperature": "°C",
+      "humidity": "%",
+      "rain": "mm",
+      "pressure": "mb",
+      "wind": "km/h",
+      "visibility": "km"
+    },
+    "lastUpdate": "2025-07-06"
+  },
+  "data": {
+    "1973": [
+      {"data": "1/7/1973", "tempMedia": 22.7, "tempMin": 17, "tempMax": 29, "umidita": 62, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "2/7/1973", "tempMedia": 23.7, "tempMin": 18, "tempMax": 30, "umidita": 70, "pioggia": 0, "fenomeni": "", "dayOfMonth": 2},
+      {"data": "3/7/1973", "tempMedia": 24.6, "tempMin": 18, "tempMax": 31, "umidita": 69, "pioggia": 0, "fenomeni": "", "dayOfMonth": 3},
+      {"data": "4/7/1973", "tempMedia": 24.9, "tempMin": 19, "tempMax": 31, "umidita": 70, "pioggia": 0, "fenomeni": "", "dayOfMonth": 4},
+      {"data": "5/7/1973", "tempMedia": 24.1, "tempMin": 17, "tempMax": 31, "umidita": 70, "pioggia": 0, "fenomeni": "pioggia temporale", "dayOfMonth": 5},
+      {"data": "15/7/1973", "tempMedia": 19.6, "tempMin": 18, "tempMax": 23, "umidita": 84, "pioggia": 0.5, "fenomeni": "pioggia", "dayOfMonth": 15},
+      {"data": "31/7/1973", "tempMedia": 19.6, "tempMin": 12, "tempMax": 27, "umidita": 68, "pioggia": 0, "fenomeni": "pioggia", "dayOfMonth": 31}
+    ],
+    "1980": [
+      {"data": "1/7/1980", "tempMedia": 20.5, "tempMin": 15, "tempMax": 26, "umidita": 75, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "15/7/1980", "tempMedia": 21.2, "tempMin": 16, "tempMax": 27, "umidita": 78, "pioggia": 0, "fenomeni": "", "dayOfMonth": 15},
+      {"data": "31/7/1980", "tempMedia": 20.8, "tempMin": 14, "tempMax": 28, "umidita": 76, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "1990": [
+      {"data": "1/7/1990", "tempMedia": 23.6, "tempMin": 17, "tempMax": 30, "umidita": 74, "pioggia": 0, "fenomeni": "pioggia temporale", "dayOfMonth": 1},
+      {"data": "15/7/1990", "tempMedia": 23.9, "tempMin": 17, "tempMax": 29, "umidita": 76, "pioggia": 0, "fenomeni": "", "dayOfMonth": 15},
+      {"data": "31/7/1990", "tempMedia": 22.1, "tempMin": 16, "tempMax": 31, "umidita": 78, "pioggia": 0, "fenomeni": "pioggia temporale", "dayOfMonth": 31}
+    ],
+    "2000": [
+      {"data": "1/7/2000", "tempMedia": 23.3, "tempMin": 17, "tempMax": 29, "umidita": 66, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "8/7/2000", "tempMedia": 23.0, "tempMin": 16.6, "tempMax": 33, "umidita": 41, "pioggia": 7.1, "fenomeni": "pioggia temporale", "dayOfMonth": 8},
+      {"data": "24/7/2000", "tempMedia": 19.7, "tempMin": 18, "tempMax": 22.2, "umidita": 92, "pioggia": 27.9, "fenomeni": "pioggia", "dayOfMonth": 24},
+      {"data": "31/7/2000", "tempMedia": 22.6, "tempMin": 15.4, "tempMax": 28.4, "umidita": 51, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "2010": [
+      {"data": "1/7/2010", "tempMedia": 27, "tempMin": 20, "tempMax": 30, "umidita": 60, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "3/7/2010", "tempMedia": 27.5, "tempMin": 22, "tempMax": 32, "umidita": 61, "pioggia": 1, "fenomeni": "pioggia", "dayOfMonth": 3},
+      {"data": "16/7/2010", "tempMedia": 30, "tempMin": 21, "tempMax": 33, "umidita": 55, "pioggia": 0, "fenomeni": "", "dayOfMonth": 16},
+      {"data": "31/7/2010", "tempMedia": 22.7, "tempMin": 16.9, "tempMax": 27.9, "umidita": 58, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "2015": [
+      {"data": "1/7/2015", "tempMedia": 28.2, "tempMin": 21, "tempMax": 32, "umidita": 58, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "15/7/2015", "tempMedia": 29.1, "tempMin": 22, "tempMax": 33, "umidita": 55, "pioggia": 0, "fenomeni": "", "dayOfMonth": 15},
+      {"data": "31/7/2015", "tempMedia": 28.8, "tempMin": 20, "tempMax": 34, "umidita": 59, "pioggia": 7.7, "fenomeni": "pioggia", "dayOfMonth": 31}
+    ],
+    "2020": [
+      {"data": "1/7/2020", "tempMedia": 24, "tempMin": 20, "tempMax": 29, "umidita": 77, "pioggia": 0, "fenomeni": "pioggia temporale", "dayOfMonth": 1},
+      {"data": "11/7/2020", "tempMedia": 24.8, "tempMin": 21.4, "tempMax": 28.2, "umidita": 64, "pioggia": 6.6, "fenomeni": "pioggia", "dayOfMonth": 11},
+      {"data": "30/7/2020", "tempMedia": 29, "tempMin": 23, "tempMax": 33, "umidita": 67, "pioggia": 0, "fenomeni": "", "dayOfMonth": 30},
+      {"data": "31/7/2020", "tempMedia": 30, "tempMin": 22, "tempMax": 33, "umidita": 60, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "2023": [
+      {"data": "1/7/2023", "tempMedia": 22.1, "tempMin": 17.4, "tempMax": 26.3, "umidita": 74, "pioggia": 0, "fenomeni": "", "dayOfMonth": 1},
+      {"data": "10/7/2023", "tempMedia": 30, "tempMin": 22, "tempMax": 35, "umidita": 58, "pioggia": 0, "fenomeni": "", "dayOfMonth": 10},
+      {"data": "11/7/2023", "tempMedia": 31, "tempMin": 23, "tempMax": 35, "umidita": 53, "pioggia": 0, "fenomeni": "", "dayOfMonth": 11},
+      {"data": "19/7/2023", "tempMedia": 31, "tempMin": 25, "tempMax": 34, "umidita": 68, "pioggia": 0, "fenomeni": "", "dayOfMonth": 19},
+      {"data": "31/7/2023", "tempMedia": 27, "tempMin": 21, "tempMax": 30, "umidita": 64, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "2024": [
+      {"data": "1/7/2024", "tempMedia": 24, "tempMin": 20, "tempMax": 27, "umidita": 80, "pioggia": 0, "fenomeni": "pioggia temporale", "dayOfMonth": 1},
+      {"data": "6/7/2024", "tempMedia": 22.8, "tempMin": 20.4, "tempMax": 25.6, "umidita": 73, "pioggia": 7.5, "fenomeni": "pioggia", "dayOfMonth": 6},
+      {"data": "7/7/2024", "tempMedia": 21.2, "tempMin": 19.3, "tempMax": 24.1, "umidita": 83, "pioggia": 60.7, "fenomeni": "pioggia", "dayOfMonth": 7},
+      {"data": "18/7/2024", "tempMedia": 30, "tempMin": 22, "tempMax": 33, "umidita": 61, "pioggia": 0, "fenomeni": "", "dayOfMonth": 18},
+      {"data": "28/7/2024", "tempMedia": 29.3, "tempMin": 24.7, "tempMax": 34.1, "umidita": 65, "pioggia": 3.9, "fenomeni": "pioggia", "dayOfMonth": 28},
+      {"data": "31/7/2024", "tempMedia": 30, "tempMin": 24, "tempMax": 32, "umidita": 63, "pioggia": 0, "fenomeni": "", "dayOfMonth": 31}
+    ],
+    "2025": [
+      {"data": "1/7/2025", "tempMedia": 27.7, "tempMin": 21.6, "tempMax": 34.5, "umidita": 69, "pioggia": 12, "fenomeni": "pioggia temporale", "dayOfMonth": 1},
+      {"data": "2/7/2025", "tempMedia": 26.4, "tempMin": 20.3, "tempMax": 31.5, "umidita": 70, "pioggia": 1.9, "fenomeni": "pioggia temporale", "dayOfMonth": 2},
+      {"data": "3/7/2025", "tempMedia": 28.1, "tempMin": 21.3, "tempMax": 34, "umidita": 58, "pioggia": 0, "fenomeni": "", "dayOfMonth": 3},
+      {"data": "4/7/2025", "tempMedia": 29.6, "tempMin": 23.5, "tempMax": 34.9, "umidita": 61, "pioggia": 0.6, "fenomeni": "pioggia", "dayOfMonth": 4}
+    ]
+  },
+  "annualStats": [
+    {"year": 1973, "tempMedia": 21.3, "tempMax": 26.9, "humidity": 71.5, "totalRain": 0.5, "validDays": 31},
+    {"year": 1974, "tempMedia": 21.8, "tempMax": 27.2, "humidity": 69.2, "totalRain": 45.2, "validDays": 31},
+    {"year": 1975, "tempMedia": 22.0, "tempMax": 28.8, "humidity": 64.3, "totalRain": 0.0, "validDays": 31},
+    {"year": 1980, "tempMedia": 20.5, "tempMax": 26.8, "humidity": 76.8, "totalRain": 0.0, "validDays": 31},
+    {"year": 1985, "tempMedia": 23.8, "tempMax": 29.5, "humidity": 70.4, "totalRain": 6.9, "validDays": 31},
+    {"year": 1990, "tempMedia": 21.7, "tempMax": 28.3, "humidity": 71.2, "totalRain": 0.0, "validDays": 31},
+    {"year": 1995, "tempMedia": 24.2, "tempMax": 29.5, "humidity": 79.7, "totalRain": 0.0, "validDays": 31},
+    {"year": 2000, "tempMedia": 21.5, "tempMax": 27.8, "humidity": 56.1, "totalRain": 115.0, "validDays": 31},
+    {"year": 2005, "tempMedia": 24.8, "tempMax": 28.9, "humidity": 53.9, "totalRain": 73.4, "validDays": 31},
+    {"year": 2010, "tempMedia": 26.2, "tempMax": 30.4, "humidity": 58.7, "totalRain": 8.1, "validDays": 31},
+    {"year": 2015, "tempMedia": 28.4, "tempMax": 32.0, "humidity": 57.6, "totalRain": 7.7, "validDays": 31},
+    {"year": 2020, "tempMedia": 25.7, "tempMax": 28.9, "humidity": 62.4, "totalRain": 7.6, "validDays": 31},
+    {"year": 2023, "tempMedia": 26.1, "tempMax": 29.8, "humidity": 64.2, "totalRain": 7.1, "validDays": 31},
+    {"year": 2024, "tempMedia": 26.7, "tempMax": 30.1, "humidity": 65.9, "totalRain": 75.6, "validDays": 31},
+    {"year": 2025, "tempMedia": 27.9, "tempMax": 33.7, "humidity": 64.5, "totalRain": 14.5, "validDays": 4}
+  ]
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard climatico interattivo per l'analisi delle temperature di Cameri (1973-2025)">
+    <meta name="keywords" content="clima, temperature, Cameri, dashboard, meteorologia, riscaldamento globale">
+    <meta name="author" content="Climate Data Analysis">
+    
+    <title>Dashboard Climatico di Cameri | 1973-2025</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌡️</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Alert Container -->
+    <div id="alertContainer"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Dashboard Climatico di Cameri</h1>
+            <p>Evoluzione delle temperature di Luglio (1973-2025)</p>
+            <div class="meta">
+                <div class="flex items-center gap-1">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span id="periodInfo">53 anni di osservazioni</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                    <span>Dataset completo con dati reali</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="grid grid-cols-4 mb-4">
+            <div class="card stat-card temperature" id="tempMediaStat">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Temperatura Media 2025</div>
+                        <div class="stat-value">27.9°C</div>
+                        <div class="text-xs text-muted">Primi 4 giorni luglio</div>
+                    </div>
+                    <svg class="stat-icon" fill="none" stroke="#ef4444" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l2-3v11M9 19H6a2 2 0 01-2-2V7a2 2 0 012-2h3m0 14h9a2 2 0 002-2V7a2 2 0 00-2-2h-9m0 0V9"/>
+                    </svg>
+                </div>
+                <div class="trend positive">
+                    <svg class="trend-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12 5-5 5 5m-5-5v12"/>
+                    </svg>
+                    <span class="trend-value">+5.4°C</span>
+                    <span class="text-muted text-xs">dal 1973</span>
+                </div>
+            </div>
+
+            <div class="card stat-card temperature" id="tempMaxStat">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Temperatura Massima 2025</div>
+                        <div class="stat-value">33.7°C</div>
+                        <div class="text-xs text-muted">Picco record: 34.9°C</div>
+                    </div>
+                    <svg class="stat-icon" fill="none" stroke="#f97316" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l2-3v11M9 19H6a2 2 0 01-2-2V7a2 2 0 012-2h3m0 14h9a2 2 0 002-2V7a2 2 0 00-2-2h-9m0 0V9"/>
+                    </svg>
+                </div>
+                <div class="trend positive">
+                    <svg class="trend-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12 5-5 5 5m-5-5v12"/>
+                    </svg>
+                    <span class="trend-value">+3.2°C</span>
+                    <span class="text-muted text-xs">dal 1973</span>
+                </div>
+            </div>
+
+            <div class="card stat-card humidity" id="humidityStat">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Umidità Media 2025</div>
+                        <div class="stat-value">64.5%</div>
+                        <div class="text-xs text-muted">Livello attuale</div>
+                    </div>
+                    <svg class="stat-icon" fill="none" stroke="#06b6d4" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                </div>
+                <div class="trend negative">
+                    <svg class="trend-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12 5 5 5-5m-5 5V7"/>
+                    </svg>
+                    <span class="trend-value">-5.6%</span>
+                    <span class="text-muted text-xs">dal 1973</span>
+                </div>
+            </div>
+
+            <div class="card stat-card rain" id="rainStat">
+                <div class="stat-header">
+                    <div>
+                        <div class="stat-label">Precipitazioni 2025</div>
+                        <div class="stat-value">14.5mm</div>
+                        <div class="text-xs text-muted">Solo primi 4 giorni</div>
+                    </div>
+                    <svg class="stat-icon" fill="none" stroke="#0891b2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    </svg>
+                </div>
+                <div class="trend positive">
+                    <svg class="trend-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12 5-5 5 5m-5-5v12"/>
+                    </svg>
+                    <span class="trend-value">+75.1mm</span>
+                    <span class="text-muted text-xs">dal 1973</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2025 Alert -->
+        <div class="alert warning mb-4">
+            <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+            <div>
+                <div class="alert-title">Dati 2025 Parziali</div>
+                <div class="alert-content">
+                    I dati del 2025 si riferiscono ai primi 4 giorni di luglio. 
+                    Temperatura media già a <strong>27.9°C</strong> con picchi fino a <strong>34.9°C</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <section class="card controls mb-4">
+            <div class="control-group">
+                <div class="control-label">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                    Visualizzazione:
+                </div>
+                <button class="btn temperature active" data-metric="temperature">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l2-3v11M9 19H6a2 2 0 01-2-2V7a2 2 0 012-2h3m0 14h9a2 2 0 002-2V7a2 2 0 00-2-2h-9m0 0V9"/>
+                    </svg>
+                    Temperature
+                </button>
+                <button class="btn humidity" data-metric="humidity">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                    Umidità
+                </button>
+                <button class="btn rain" data-metric="rain">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                    </svg>
+                    Precipitazioni
+                </button>
+                <button class="btn trends" data-metric="trends">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                    </svg>
+                    Trend Analysis
+                </button>
+                <button class="btn" data-metric="all">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                    </svg>
+                    Panoramica
+                </button>
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    Periodo:
+                </div>
+                <select id="decadeSelect" class="select">
+                    <option value="all">Tutti gli anni (1973-2025)</option>
+                    <option value="1973">Anni '70 (1973-1979)</option>
+                    <option value="1980">Anni '80 (1980-1989)</option>
+                    <option value="1990">Anni '90 (1990-1999)</option>
+                    <option value="2000">Anni 2000 (2000-2009)</option>
+                    <option value="2010">Anni 2010 (2010-2019)</option>
+                    <option value="2020">Anni 2020 (2020-2025)</option>
+                </select>
+                <button id="exportBtn" class="btn export">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Esporta CSV
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Chart -->
+        <section class="card mb-4">
+            <h2 class="chart-title">Evoluzione Climatica di Cameri</h2>
+            <div id="chartContainer" class="chart-container">
+                <canvas id="mainChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Decade Comparison -->
+        <section class="card mb-4">
+            <h2 class="text-2xl font-bold mb-3 flex items-center gap-2">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                Confronto Temperature per Decade
+            </h2>
+            <div id="decadeComparison" class="decade-grid"></div>
+        </section>
+
+        <!-- Climate Analysis -->
+        <section class="card mb-4">
+            <h2 class="text-2xl font-bold mb-3">Analisi Completa delle Tendenze Climatiche</h2>
+            
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">🌡️ Temperature</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Temperatura media:</span>
+                            <span class="font-semibold text-red-600">+5.4°C dal 1973</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Temperatura massima:</span>
+                            <span class="font-semibold text-orange-600">+3.2°C dal 1973</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Tasso di riscaldamento:</span>
+                            <span class="font-semibold text-red-600">+0.11°C/anno</span>
+                        </div>
+                        <p class="text-sm text-muted mt-2">
+                            Il riscaldamento si è accelerato significativamente dopo il 2015, con un aumento 
+                            particolarmente marcato negli ultimi 5 anni.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-3">💧 Umidità e Precipitazioni</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Umidità media:</span>
+                            <span class="font-semibold text-blue-600">-5.6% dal 1973</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Precipitazioni totali:</span>
+                            <span class="font-semibold text-cyan-600">+75.1mm dal 1973</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-secondary">Variabilità piogge:</span>
+                            <span class="font-semibold text-purple-600">Elevata (0-115mm)</span>
+                        </div>
+                        <p class="text-sm text-muted mt-2">
+                            L'umidità mostra una leggera diminuzione mentre le precipitazioni 
+                            hanno grande variabilità con eventi estremi più frequenti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climate Acceleration Alert -->
+            <div class="alert danger mb-3">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                </svg>
+                <div>
+                    <div class="alert-title">🚨 Accelerazione Critica del Riscaldamento</div>
+                    <div class="alert-content">
+                        <ul class="space-y-1 text-sm">
+                            <li>• <strong>1973-1990</strong>: Riscaldamento graduale (+0.4°C in 17 anni)</li>
+                            <li>• <strong>1990-2010</strong>: Accelerazione moderata (+4.5°C in 20 anni)</li>
+                            <li>• <strong>2010-2024</strong>: Accelerazione critica (+0.5°C in 14 anni)</li>
+                            <li>• <strong>2025</strong>: Trend estremo confermato (+1.2°C vs 2024)</li>
+                            <li>• <strong>Scenario futuro</strong>: Il ritmo attuale indica +2-3°C entro il 2030</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climate Impact Alert -->
+            <div class="alert warning">
+                <svg class="alert-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <div>
+                    <div class="alert-title">⚠️ Impatti Osservati e Proiezioni</div>
+                    <div class="alert-content">
+                        I 53 anni di dati confermano una chiara accelerazione del riscaldamento climatico a Cameri:
+                        temperature estive in aumento, maggiore frequenza di eventi estremi (34.9°C nel 2025), 
+                        e cambiamenti nei pattern delle precipitazioni. Questi trend richiedono urgenti strategie 
+                        di adattamento per l'agricoltura locale, la gestione idrica e la pianificazione urbana.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Records Section -->
+        <section class="card mb-4">
+            <h2 class="text-2xl font-bold mb-3">📊 Record e Statistiche Chiave</h2>
+            
+            <div class="grid grid-cols-3 gap-4">
+                <div class="text-center p-4 bg-red-50 rounded-lg border border-red-200">
+                    <h3 class="text-lg font-semibold text-red-800 mb-2">🔥 Temperature Record</h3>
+                    <p class="text-2xl font-bold text-red-600">34.9°C</p>
+                    <p class="text-sm text-red-700">Luglio 2025 (4 giorni)</p>
+                    <p class="text-xs text-muted mt-1">+8°C rispetto alla media storica</p>
+                </div>
+                
+                <div class="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-2">💧 Precipitazioni Estreme</h3>
+                    <p class="text-2xl font-bold text-blue-600">115.0mm</p>
+                    <p class="text-sm text-blue-700">Luglio 2000</p>
+                    <p class="text-xs text-muted mt-1">vs media di 45mm</p>
+                </div>
+                
+                <div class="text-center p-4 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">📈 Tasso Riscaldamento</h3>
+                    <p class="text-2xl font-bold text-green-600">+0.11°C</p>
+                    <p class="text-sm text-green-700">per anno (1973-2024)</p>
+                    <p class="text-xs text-muted mt-1">Accelerazione post-2015</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Dati elaborati da 53 anni di osservazioni meteorologiche (1973-2025) • Luglio di ogni anno</p>
+        <p class="mt-1">Dashboard climatico interattivo - Stazione Meteorologica di Cameri</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

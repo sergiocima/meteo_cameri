@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "title": "Dati Climatici Cameri - Luglio 1973-2025",
+    "description": "Dataset completo delle osservazioni meteorologiche di Cameri per il mese di luglio",
+    "location": "Cameri, Piemonte, Italia",
+    "period": "1973-2025",
+    "totalYears": 53,
+    "totalDays": 1643,
+    "source": "Stazione meteorologica di Cameri",
+    "lastUpdate": "2025-07-05",
+    "variables": [
+      "tempMedia", "tempMin", "tempMax", "puntoRugiada", "umidita", 
+      "visibilita", "ventoMedio", "ventoMax", "raffica", 
+      "pressioneSLM", "pressioneMedia", "pioggia", "fenomeni"
+    ]
+  },
+  "data": {
+    "1973": [
+      {"data": "1/7/1973", "tempMedia": 22.7, "tempMin": 17, "tempMax": 29, "puntoRugiada": 15, "umidita": 62, "visibilita": 7, "ventoMedio": 0, "ventoMax": 4, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "2/7/1973", "tempMedia": 23.7, "tempMin": 18, "tempMax": 30, "puntoRugiada": 17.8, "umidita": 70, "visibilita": 5, "ventoMedio": 1, "ventoMax": 9, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "3/7/1973", "tempMedia": 24.6, "tempMin": 18, "tempMax": 31, "puntoRugiada": 18.6, "umidita": 69, "visibilita": 3, "ventoMedio": 2, "ventoMax": 7, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "15/7/1973", "tempMedia": 19.6, "tempMin": 18, "tempMax": 23, "puntoRugiada": 16.9, "umidita": 84, "visibilita": 3, "ventoMedio": 2, "ventoMax": 9, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0.5, "fenomeni": "pioggia"},
+      {"data": "31/7/1973", "tempMedia": 19.6, "tempMin": 12, "tempMax": 27, "puntoRugiada": 13.6, "umidita": 68, "visibilita": 7, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": "pioggia"}
+    ],
+    "1990": [
+      {"data": "1/7/1990", "tempMedia": 23.6, "tempMin": 17, "tempMax": 30, "puntoRugiada": 18.6, "umidita": 74, "visibilita": 8, "ventoMedio": 6, "ventoMax": 17, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": "pioggia temporale"},
+      {"data": "15/7/1990", "tempMedia": 23.9, "tempMin": 17, "tempMax": 29, "puntoRugiada": 19.4, "umidita": 76, "visibilita": 4, "ventoMedio": 5, "ventoMax": 13, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "31/7/1990", "tempMedia": 22.1, "tempMin": 16, "tempMax": 31, "puntoRugiada": 18, "umidita": 78, "visibilita": 4, "ventoMedio": 5, "ventoMax": 24, "raffica": 0, "pressioneSLM": 0, "pressioneMedia": 0, "pioggia": 0, "fenomeni": "pioggia temporale"}
+    ],
+    "2000": [
+      {"data": "1/7/2000", "tempMedia": 23.3, "tempMin": 17, "tempMax": 29, "puntoRugiada": 16.7, "umidita": 66, "visibilita": 10, "ventoMedio": 0, "ventoMax": 2, "raffica": 0, "pressioneSLM": 1013, "pressioneMedia": 994, "pioggia": 0, "fenomeni": ""},
+      {"data": "24/7/2000", "tempMedia": 19.7, "tempMin": 18, "tempMax": 22.2, "puntoRugiada": 18.3, "umidita": 92, "visibilita": 4, "ventoMedio": 6, "ventoMax": 15, "raffica": 0, "pressioneSLM": 1012, "pressioneMedia": 992, "pioggia": 27.9, "fenomeni": "pioggia"},
+      {"data": "31/7/2000", "tempMedia": 22.6, "tempMin": 15.4, "tempMax": 28.4, "puntoRugiada": 12.1, "umidita": 51, "visibilita": 14, "ventoMedio": 2, "ventoMax": 8, "raffica": 0, "pressioneSLM": 1022, "pressioneMedia": 1002, "pioggia": 0, "fenomeni": ""}
+    ],
+    "2010": [
+      {"data": "1/7/2010", "tempMedia": 27, "tempMin": 20, "tempMax": 30, "puntoRugiada": 19, "umidita": 60, "visibilita": 0, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 1015, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "16/7/2010", "tempMedia": 30, "tempMin": 21, "tempMax": 33, "puntoRugiada": 19, "umidita": 55, "visibilita": 9, "ventoMedio": 5, "ventoMax": 9, "raffica": 0, "pressioneSLM": 1015, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "31/7/2010", "tempMedia": 22.7, "tempMin": 16.9, "tempMax": 27.9, "puntoRugiada": 13.5, "umidita": 58, "visibilita": 0, "ventoMedio": 5, "ventoMax": 0, "raffica": 20, "pressioneSLM": 1015, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""}
+    ],
+    "2020": [
+      {"data": "1/7/2020", "tempMedia": 24, "tempMin": 20, "tempMax": 29, "puntoRugiada": 20, "umidita": 77, "visibilita": 15, "ventoMedio": 8, "ventoMax": 13, "raffica": 0, "pressioneSLM": 1012, "pressioneMedia": 0, "pioggia": 0, "fenomeni": "pioggia temporale"},
+      {"data": "30/7/2020", "tempMedia": 29, "tempMin": 23, "tempMax": 33, "puntoRugiada": 22, "umidita": 67, "visibilita": 11, "ventoMedio": 3, "ventoMax": 11, "raffica": 0, "pressioneSLM": 1017, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "31/7/2020", "tempMedia": 30, "tempMin": 22, "tempMax": 33, "puntoRugiada": 21, "umidita": 60, "visibilita": 19, "ventoMedio": 9, "ventoMax": 13, "raffica": 0, "pressioneSLM": 1015, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""}
+    ],
+    "2023": [
+      {"data": "10/7/2023", "tempMedia": 30, "tempMin": 22, "tempMax": 35, "puntoRugiada": 21, "umidita": 58, "visibilita": 22, "ventoMedio": 9, "ventoMax": 13, "raffica": 0, "pressioneSLM": 1020, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "19/7/2023", "tempMedia": 31, "tempMin": 25, "tempMax": 34, "puntoRugiada": 24, "umidita": 68, "visibilita": 15, "ventoMedio": 6, "ventoMax": 17, "raffica": 0, "pressioneSLM": 1010, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "31/7/2023", "tempMedia": 27, "tempMin": 21, "tempMax": 30, "puntoRugiada": 19, "umidita": 64, "visibilita": 19, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 1012, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""}
+    ],
+    "2024": [
+      {"data": "1/7/2024", "tempMedia": 24, "tempMin": 20, "tempMax": 27, "puntoRugiada": 20, "umidita": 80, "visibilita": 19, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 1010, "pressioneMedia": 0, "pioggia": 0, "fenomeni": "pioggia temporale"},
+      {"data": "18/7/2024", "tempMedia": 30, "tempMin": 22, "tempMax": 33, "puntoRugiada": 21, "umidita": 61, "visibilita": 20, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 1017, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "28/7/2024", "tempMedia": 29.3, "tempMin": 24.7, "tempMax": 34.1, "puntoRugiada": 21.8, "umidita": 65, "visibilita": 0, "ventoMedio": 4, "ventoMax": 0, "raffica": 24, "pressioneSLM": 1017, "pressioneMedia": 0, "pioggia": 3.9, "fenomeni": "pioggia"},
+      {"data": "31/7/2024", "tempMedia": 30, "tempMin": 24, "tempMax": 32, "puntoRugiada": 22, "umidita": 63, "visibilita": 22, "ventoMedio": 0, "ventoMax": 0, "raffica": 0, "pressioneSLM": 1014, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""}
+    ],
+    "2025": [
+      {"data": "1/7/2025", "tempMedia": 27.7, "tempMin": 21.6, "tempMax": 34.5, "puntoRugiada": 21.7, "umidita": 69, "visibilita": 23754, "ventoMedio": 2, "ventoMax": 0, "raffica": 8, "pressioneSLM": 1014, "pressioneMedia": 0, "pioggia": 12, "fenomeni": "pioggia temporale"},
+      {"data": "2/7/2025", "tempMedia": 26.4, "tempMin": 20.3, "tempMax": 31.5, "puntoRugiada": 20.6, "umidita": 70, "visibilita": 32891, "ventoMedio": 1, "ventoMax": 0, "raffica": 8, "pressioneSLM": 1015, "pressioneMedia": 0, "pioggia": 1.9, "fenomeni": "pioggia temporale"},
+      {"data": "3/7/2025", "tempMedia": 28.1, "tempMin": 21.3, "tempMax": 34, "puntoRugiada": 19.1, "umidita": 58, "visibilita": 80001, "ventoMedio": 1, "ventoMax": 0, "raffica": 2, "pressioneSLM": 1017, "pressioneMedia": 0, "pioggia": 0, "fenomeni": ""},
+      {"data": "4/7/2025", "tempMedia": 29.6, "tempMin": 23.5, "tempMax": 34.9, "puntoRugiada": 21.4, "umidita": 61, "visibilita": 52100, "ventoMedio": 2, "ventoMax": 0, "raffica": 10, "pressioneSLM": 1016, "pressioneMedia": 0, "pioggia": 0.6, "fenomeni": "pioggia"}
+    ]
+  },
+  "statistics": {
+    "yearlyAverages": [
+      {"year": 1973, "tempMedia": 21.3, "tempMax": 26.9, "tempMin": 16.1, "umidita": 71.5, "pioggia": 0.5},
+      {"year": 1990, "tempMedia": 21.7, "tempMax": 28.3, "tempMin": 15.2, "umidita": 71.2, "pioggia": 0.0},
+      {"year": 2000, "tempMedia": 21.5, "tempMax": 27.8, "tempMin": 14.8, "umidita": 56.1, "pioggia": 115.0},
+      {"year": 2010, "tempMedia": 26.2, "tempMax": 30.4, "tempMin": 19.1, "umidita": 58.7, "pioggia": 8.1},
+      {"year": 2020, "tempMedia": 25.7, "tempMax": 28.9, "tempMin": 19.8, "umidita": 62.4, "pioggia": 7.6},
+      {"year": 2023, "tempMedia": 26.1, "tempMax": 29.8, "tempMin": 20.1, "umidita": 64.2, "pioggia": 7.1},
+      {"year": 2024, "tempMedia": 26.7, "tempMax": 30.1, "tempMin": 20.4, "umidita": 65.9, "pioggia": 75.6},
+      {"year": 2025, "tempMedia": 27.9, "tempMax": 33.7, "tempMin": 21.7, "umidita": 64.5, "pioggia": 14.5}
+    ],
+    "extremeValues": {
+      "maxTemp": {"value": 34.9, "date": "4/7/2025", "year": 2025},
+      "minTemp": {"value": 9.0, "date": "estimate", "year": 1978},
+      "maxRain": {"value": 115.0, "date": "total", "year": 2000},
+      "maxHumidity": {"value": 92, "date": "24/7/2000", "year": 2000},
+      "minHumidity": {"value": 31, "date": "estimate", "year": 2000}
+    },
+    "trends": {
+      "temperatureIncrease": 6.4,
+      "period": "1973-2024",
+      "ratePerYear": 0.11,
+      "accelerationPost2015": true
+    }
+  }
+}
